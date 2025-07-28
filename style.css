@@ -1,0 +1,55 @@
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+  background: black;
+  color: white;
+}
+
+.stars, .twinkling {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  background: transparent url('https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif') repeat top center;
+  z-index: 0;
+}
+
+.twinkling {
+  background: transparent url('https://media.giphy.com/media/l41lQDPG5U8GNnMZa/giphy.gif') repeat top center;
+  animation: moveTwinkling 200s linear infinite;
+}
+
+@keyframes moveTwinkling {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+
+.content {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.content h1 {
+  font-size: 4em;
+  color: cyan;
+  text-shadow: 0 0 10px white;
+}
+
+.content p {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: lightblue;
+}
+
+.content span {
+  font-size: 1em;
+  color: violet;
+}
